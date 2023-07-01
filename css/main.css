@@ -1,0 +1,238 @@
+.header {
+  position: sticky;
+
+}
+
+.title h2 {
+  color: #3bb88c;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 30px 0;
+}
+
+.title strong {
+  display: block;
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0 0 30px 0;
+}
+
+.title p {
+  font-size: 20px;
+  margin: 0 0 30px 0;
+}
+
+.header .header_wrap {
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+.header .header_wrap .gnb ul {
+  display: flex;
+  gap: 30px;
+}
+
+.header .header_wrap .rgh {
+  font-size: 15px;
+  padding: 5px 20px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+}
+
+.header .header_wrap .rgh ul {
+  display: flex;
+  position: relative;
+  gap: 10px;
+
+
+}
+
+
+
+
+.header .header_wrap .rgh ul>li~li::before {
+  content: "";
+  position: absolute;
+  background: #ddd;
+  top: 50%;
+  right: 48%;
+  transform: translate(-50%, -50%);
+  height: 12px;
+  width: 1px;
+
+}
+
+.maincontent {
+  padding: 100px 0;
+}
+
+.maincontent .title {}
+
+
+
+.maincontent .content_box {
+  border-radius: 50px;
+  overflow: hidden;
+  margin: 0 0 30px 0;
+}
+
+.maincontent .txt p {
+  font-size: 20px;
+
+  line-height: 1.4;
+}
+
+.maintap {
+  padding: 100px 0;
+}
+
+
+.maintap .tap .top {
+  position: relative;
+  z-index: 998;
+}
+
+
+
+
+.maintap .tap .top .tap_menu {
+  position: absolute;
+  top: 150px;
+  display: flex;
+  padding: 0 30px 0 0;
+  width: 100%;
+  gap: 30px;
+  z-index: 999;
+
+}
+
+.maintap .tap .top .tap_menu li {
+  color: #888;
+  width: 100%;
+  height: 70px;
+  line-height: 70px;
+  text-align: left;
+  font-size: 22px;
+  font-weight: 500;
+  border-top: 2px solid #888;
+  cursor: pointer;
+
+}
+
+.maintap .tap .tap_menu li.on {
+  color: #fff;
+  border-top: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.maintap .tap .bottom::before {
+  content: "";
+  position: absolute;
+
+  display: block;
+  background: linear-gradient(to bottom, #000 5%, transparent 80%);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.maintap .tap .bottom {
+  position: relative;
+
+}
+
+.maintap .bottom .tap_detail .detail_box {
+  position: relative;
+}
+
+
+
+.maintap .bottom .tap_detail .detail_box .text_box {
+  position: absolute;
+  top: 300px;
+  z-index: 998;
+
+}
+
+.maintap .bottom h3 {
+  font-size: 55px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 30px 0;
+
+}
+
+.maintap .bottom p {
+  margin: 0 0 30px 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.maintap .bottom strong {
+  display: block;
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 15px 0;
+
+}
+
+.maintap .bottom span {
+  position: relative;
+  display: block;
+
+  color: #fff;
+  line-height: 40px;
+  margin: 0 0 0 15px;
+
+
+}
+
+
+.maintap .bottom span::before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  top: 50%;
+  transform: translate(0, -50%);
+
+  left: -15px;
+  width: 3px;
+  height: 3px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.maintap .bottom .text .text_box a {
+
+  display: inline-block;
+  margin: 50px 0;
+  color: #fff;
+  border: 1px solid #999;
+  padding: 12px 40px;
+  transition: 0.5s;
+
+
+}
+
+.maintap .bottom .text .text_box a:hover {
+  border: none;
+  background: #ac8956;
+}
+
+
+
+
+
+.maintap .tap .tap_detail li {
+  height: 0;
+  overflow: hidden;
+
+}
+
+.maintap .tap .tap_detail li.on {
+  height: auto;
+
+}
