@@ -2,12 +2,6 @@ $(function () {
   $(window).on('scroll', function () {
     let sct = $(window).scrollTop();
     sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
-
-  })
-  $(window).on('scroll', function () {
-    let sct = $(window).scrollTop();
-    sct > 1000 ? $('.to_top').addClass('on') : $('.to_top').removeClass('on');
-
   })
 
 
@@ -24,21 +18,15 @@ $(function () {
 
   })
 
-  $('.mainproduct .product_tap li').on('click', function (e) {
+  $('.mainproduct .right li').on('click', function (e) {
     e.preventDefault();
     let idx = $(this).index();
-    $('.mainproduct .product_tap li').eq(idx).addClass('on').siblings().removeClass('on');
-    $('.left_box .grap').eq(idx).addClass('on').siblings().removeClass('on');
-
+    $('.mainproduct .right li').eq(idx).addClass('on').siblings().removeClass('on');
+    $('.left .txt_box').eq(idx).addClass('on').siblings().removeClass('on');
+    $('.middle .img_box').eq(idx).addClass('on').siblings().removeClass('on');
   })
 
-  $('.mainproduct .img_tap .alsom').on('click', function (e) {
-    e.preventDefault();
-    let idx = $(this).index();
-    $('.mainproduct .img_tap .alsom').eq(idx).addClass('on').siblings().removeClass('on');
-    $('.left_box  .slolo figure').eq(idx).addClass('on').siblings().removeClass('on');
 
-  })
 
 
 
