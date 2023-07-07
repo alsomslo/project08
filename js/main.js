@@ -3,6 +3,7 @@ $(function () {
     let sct = $(window).scrollTop();
     sct > 0 ? $('.header').addClass('on') : $('.header').removeClass('on');
 
+
   })
   $(window).on('scroll', function () {
     let sct = $(window).scrollTop();
@@ -29,6 +30,13 @@ $(function () {
     let idx = $(this).index();
     $('.mainproduct .product_tap li').eq(idx).addClass('on').siblings().removeClass('on');
     $('.left_box .grap').eq(idx).addClass('on').siblings().removeClass('on');
+
+  })
+  $('.mainnews .news_tap .menu_box').on('click', function (e) {
+    e.preventDefault();
+    let idx = $(this).index();
+    $('.mainnews .news_tap .menu_box').eq(idx).addClass('on').siblings().removeClass('on');
+    $('.news .img_box').eq(idx).addClass('on').siblings().removeClass('on');
 
   })
 
@@ -75,6 +83,8 @@ $(function () {
     $('.mainmenu li').eq(idx).addClass('on').siblings().removeClass('on');
     $('.pz_menu li').eq(idx).addClass('on').siblings().removeClass('on');
   })
+
+
 
 
 

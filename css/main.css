@@ -23,19 +23,32 @@
   width: 100%;
   z-index: 999;
   color: #fff;
-  transition: 0.5s;
+
   font-weight: 500;
 
 
 }
 
+.header:hover {
+  background: #fff;
+  color: #000;
+  transition: 0.5s;
+
+  height: 350px;
+}
+
 
 
 .header.on {
+  transition: 0.5s;
   color: #000;
   background: #fff;
   border-bottom: 1px solid #ddd;
 }
+
+
+
+
 
 
 .header .logo {
@@ -49,6 +62,13 @@
 .header.on .logo {
   background: url(../images/logo_blue.png) no-repeat;
 }
+
+.header:hover .logo {
+  background: url(../images/logo_blue.png) no-repeat;
+  ;
+}
+
+
 
 .header .header_wrap {
   display: flex;
@@ -65,7 +85,7 @@
 }
 
 .header .header_wrap .gnb ul>li {
-  line-height: 30px;
+  /* line-height: 30px; */
 }
 
 .header .header_wrap .rgh {
@@ -83,9 +103,7 @@
 
 }
 
-.header .rgh a {
-  transition: 0.5s;
-}
+.header .rgh a {}
 
 .header .rgh a:hover {
   color: #3bb88c;
@@ -109,51 +127,80 @@
 .header .gnb>ul>li {
   position: relative;
 
+
+
 }
 
 .header .gnb>ul>li .sub {
   position: absolute;
   top: 70px;
-  width: 100%;
+  width: 100px;
   left: 0;
   z-index: 999;
   height: 0;
   color: #000;
-
   overflow: hidden;
+  font-size: 14px;
+  line-height: 1.4;
+
 
 }
 
+.header .gnb>ul>li .sub li {
+  margin: 0 0 20px 0;
 
-
-.header .gnb:hover>ul>li .sub {
-  height: 200px;
 }
 
-.header .gnb::before {
-  content: "";
+.header .gnb:before {
   position: absolute;
+  content: "";
   top: 70px;
   left: 0;
   width: 100%;
-  height: 0;
-
-  background: #fff;
-  z-index: 999;
-
+  height: 1px;
+  background: #ddd;
   transition: 0.5s;
+  display: none;
+
+}
+
+.header:hover .gnb:before {
+
+  display: inherit;
+}
+
+.header .gnb>ul>li .sub .sub_box {
+
+  font-size: 12px;
+  font-weight: 700;
+  color: #777;
 }
 
 
-.header .gnb:hover::before {
+
+
+
+.header:hover .gnb>ul>li .sub {
+  transition: 0.5s;
   height: 200px;
 }
 
-.header .gnb .sub .sub_box {
-  width: 100%;
-  font-size: 12px;
-  justify-content: center;
+
+.header .gnb>ul>li .sub .sub_box li {
+  margin: 0;
 }
+
+.header .gnb>ul>li .sub .sub_box li:hover {
+  color: #3bb88c;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -468,10 +515,60 @@
 }
 
 
+.mainnews {
+  padding: 100px 0;
+
+}
+
+.mainnews .news_tap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mainnews .news_tap .menu_box {
+
+  height: 140px;
+  width: 500px;
+  line-height: 30px;
+  padding: 20px;
+
+
+  margin: 0 0 10px 0;
+}
+
+/* .mainnews .news_tap .menu_box.on {
+  background: #fff;
+  box-shadow: 1px 1px 1px 1px #ddd;
+  border-radius: 20px;
+}
+
+.mainnews .news_tap .menu_box span {
+  display: block;
+}
+
+
+.mainnews .news_tap .img_box img {
+  height: 400px;
+  width: 300px;
+  object-fit: cover;
+}
+
+
+
+
+
+.mainnews .news_tap .img_box {
+  height: 0;
+  overflow: hidden;
+}
+
+.mainnews .news_tap .img_box.on {
+  height: auto;
+} */
 
 
 .footer {
-  height: 330px;
+  height: 370px;
   background: #333;
 }
 
@@ -485,10 +582,31 @@
   margin: 0 0 30px 0;
 }
 
+.footer .footer_wrap .top {}
+
 .footer .footer_wrap .top>ul {
   display: flex;
   gap: 30px;
   margin: 0 0 20px 0;
+}
+
+.footer .footer_wrap .top>ul>li {
+  position: relative;
+}
+
+.footer .footer_wrap .top>ul>li~li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translate(0, -50%);
+  height: 10px;
+  width: 1px;
+  background: #999;
+}
+
+.footer .footer_wrap .bottom>ul>li strong {
+  font-weight: 700;
 }
 
 .footer .footer_wrap .middle {
@@ -502,11 +620,34 @@
   margin: 0 0 30px 0;
 }
 
+.footer .footer_wrap .bottom ul>li {
+  position: relative;
+}
+
+.footer .footer_wrap .bottom>ul>li~li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  transform: translate(0, -50%);
+  height: 10px;
+  width: 1px;
+  background: #999;
+}
+
 .footer .footer_wrap .copy {
+  display: flex;
+  justify-content: space-between;
   font-size: 12px;
   color: #999;
 }
 
+
+
+.footer .footer_wrap .copy .icon {
+  display: flex;
+  gap: 15px;
+}
 
 .quick_menu {
   position: fixed;
@@ -537,6 +678,11 @@
 
 }
 
+.quick_menu .content li a:hover {
+  transition: 0.5s;
+  opacity: 0.5;
+}
+
 .quick_menu .content img {
   filter: invert(100%);
   margin: 0 15px 0 0;
@@ -551,4 +697,9 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+
+.mobile_btn {
+  display: none;
 }
